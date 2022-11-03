@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Weather API</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            Weather API
+        </header>
+        <aside>
+            <div class="locationSearch" >
+                <input type="text" id="location" placeholder="Enter a location">
+
+            </div>
+        </aside>
+         <section>
+            <div id="weather">
+                <h2>Weather Information</h2>
+                <div class="weather-info">
+                    <div class="temperature">
+                        <span>Temperature:</span>
+                        <span id="temperature-value">:</span>
+                    </div>
+                    <div class="wind">
+                        <span>Wind</span>
+                        <span id="wind-value">:</span>
+                    </div>
+                    <div class="humidity">
+                        <span>Humidity</span>
+                        <span id="humidity-value">:</span>
+                    </div>
+                    <div class="uv-index">
+                        <span>UV-Index</span>
+                        <span id="uv-index">:</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
