@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  
   <title>Weather API</title>
 </head>
 
@@ -18,12 +17,14 @@
         </header>
         <aside>
             <div class="locationSearch" >
-                <input type="text" id="location" placeholder="Enter a location">
-
+                <input type="text" id="locationval" placeholder="Enter a location">
+                <button id="search">Search</button>
+                <div class="error" id="error-sec"></div>
             </div>
         </aside>
          <section>
             <div id="weather">
+                <div class="loc-weather" id="inputlocation"></div>
                 <h2>Weather Information</h2>
                 <div class="weather-info">
                     <div class="temperature">
@@ -45,6 +46,8 @@
                 </div>
             </div>
         </section>
-
+        
     </main>
 </body>
+<script src="./assets/script.js"></script>
+</html>
