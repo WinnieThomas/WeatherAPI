@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    background-color: deepskyblue;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+main{
+    display:flex;
+
+}
+
+
+#weather{
+    
+    background-color: lightgrey;
+    font-size:25px;
+}
+h2{
+    background-color: deepskyblue;
+}
+
+.forecast-day{
+    
+    border-style: double;
+    background-color: aqua;
+
+}
+
