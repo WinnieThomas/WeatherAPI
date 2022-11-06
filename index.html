@@ -11,19 +11,22 @@
 </head>
 
 <body>
-      
+      <!--header section-->
         <header>
             Weather API
         </header>
         <main>
+            <!---Search location-->
         <aside>
             <div class="locationSearch" >
                 <input type="text" id="locationval" placeholder="Enter a location">
                 <button id="search">Search</button>
-                <div class="error" id="error-sec"></div>
+                <div class="error" id="error"></div>
             </div>
+            <!---Recent location-->
+            <div class="recent-loc" id="recent-location"></div>
         </aside>
-        
+        <!--Location Weather-->
          <section>
             <div id="weather">
                 <div class="loc-weather" id="inputlocation">Entered Location</div>
@@ -47,6 +50,7 @@
                     </div>
                 </div>
             </div>
+            <!--Weather forecast-->
             <div id="forecast">
                 <h2>5 Day Weather Forecast</h2>
                 <div id="dailyforecast"></div>
