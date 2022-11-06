@@ -51,6 +51,37 @@ const getLocation=() =>{
         document.getElementById('humidity-value').textContent=currentData.humidity;
         document.getElementById('uv-index').textContent=currentData.uvi;
     }
+
+    const displayForecast=function(weatherData){
+        const dailyData = weatherData.daily;
+        document.getElementById('forecast').style.display='block';
+        const forecastList=document.getElementById('dailyforecast');
+        forecastList.innerHTML='';
+        for(var i=0;i<Max_Weather_Forecast;i++){
+            const dailyForecast=dailyData[i];
+            //const day=newDate(dailyForecast.dt*1000).toLocalDataString('en-GB',{weekday:'long'});
+            const temp=dailyForecast.temp.day;
+            const humidity=dailyForecast.humidity;
+            const wind=dailyForecast.wind_speed;
+
+            const newForecast=document.createElement('div');
+            newForecast.classList.add('forecast-day');
+            newForecast.innerHTML=`<div class="weather-info">
+            
+            <div class="temp">
+            <span>${temp}</span></div>
+            <div class="humidity">
+            <span>${humidity}</span></div>
+            <div class="wind_speed">
+            <span>${wind}</span></div>
+            </div>`;
+            forecastList.appendChild(newForecast);
+        }
+    }
+            
+
+
+    
     
 
 const searchbutton=document.getElementById('search');
