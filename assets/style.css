@@ -10,29 +10,35 @@ header{
 
 }
 
-body{
-    margin:0;
-    padding:0;
-}
+
 main{
-    display:flex;
-
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2%;
 }
-
+#locationVal{
+    width:500px;
+}
 
 #weather{
-    
+    width:950px;
     background-color: lightgrey;
     font-size:25px;
+    border-style: double;
+    border-radius: 5px;
 }
 h2{
     background-color: deepskyblue;
 }
 
 .forecast-day{
-    
+    flex:0 0 300px;
+    height:200px;
     border-style: double;
-    background-color: aqua;
-
+    background-color:deepskyblue;
+    width:200px;
+    display: inline-block;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
 }
-
