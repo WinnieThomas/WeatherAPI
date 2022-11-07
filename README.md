@@ -24,3 +24,7 @@ THEN I am again presented with current and future conditions for that city
 # Screenshots of the deployed application
 
 ![Image1](https://github.com/WinnieThomas/WeatherAPI/blob/main/assets/Images/Weather1.png?raw=true)
+
+![Image2](https://github.com/WinnieThomas/WeatherAPI/blob/main/assets/Images/Weather2.png?raw=true)
+
+
