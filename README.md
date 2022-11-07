@@ -27,4 +27,7 @@ THEN I am again presented with current and future conditions for that city
 
 ![Image2](https://github.com/WinnieThomas/WeatherAPI/blob/main/assets/Images/Weather2.png?raw=true)
 
+# Link to the deployed application
+
+https://winniethomas.github.io/WeatherAPI/
 
