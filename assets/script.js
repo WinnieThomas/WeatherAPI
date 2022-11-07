@@ -2,7 +2,7 @@ const WEATHER_API_URL='https://api.openweathermap.org/'
 const WEATHER_API_KEY='c4240879a090c28a85299a3204b7e907'
 const Max_Weather_Forecast=5;
 const recentLocations=[];
-
+//get user entered location
 const getLocation=() =>{
     const searchlocation=locationInput.value;
     //check whether user entered value
@@ -17,7 +17,7 @@ const getLocation=() =>{
         const errorDisplay=document.getElementById('error');
         errorDisplay.textContent='';
     }
-
+//display error when user have not entered a value
     const setLocationError=function(text){
         const errorDisplay=document.getElementById('error');
         errorDisplay.textContent=text;
@@ -30,7 +30,7 @@ const getLocation=() =>{
         localStorage.setItem('recentLocations',JSON.stringify(recentLocations));
         updateRecentLocationList();
     }
-
+//add the recent search location to the local storage
     const updateRecentLocationList=function(){
         const recentLocationList=document.getElementById('recent-location');
         recentLocations.innerHTML='';
@@ -60,7 +60,7 @@ const getLocation=() =>{
             }
         });
     }
-
+//search the location and get the response from server
     const locationcheck=function(search){
         var apiurl=`${WEATHER_API_URL}/geo/1.0/direct?q=${search}&limit=5&appid=${WEATHER_API_KEY}`;
         fetch(apiurl)
@@ -82,7 +82,7 @@ const getLocation=() =>{
     document.getElementById('inputlocation').innerHTML=`${weatherData.name},${weatherData.country}`;
     getWeather(weatherData.lat,weatherData.lon);
     }
-
+//get the location based on latitude and longitude
     const getWeather=function(lat,lon){
        var apiurl=`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly&appid=d91f911bcf2c0f925fb6535547a5ddc9`;
         fetch(apiurl)
@@ -94,7 +94,7 @@ const getLocation=() =>{
             displayForecast(data);
         });
     }
-
+//display 5 day forecast of the weather
     const displayWeathernow=function(weatherData){
         const currentData=weatherData.current;
         document.getElementById('temperature-value').textContent=currentData.temp;
